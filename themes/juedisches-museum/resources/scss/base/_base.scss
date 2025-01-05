@@ -1,0 +1,37 @@
+img,
+video {
+   max-width: 100%; /* Adhere to container width. */
+   height: auto; /* Make sure images are scaled correctly. */
+}
+
+body {
+   font-size: 24px;
+   line-height: 1.33;
+   font-weight: 400;
+   color: $white;
+   background-color: $onyx;
+   margin: 0;
+   font-family: $font-family-base;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+   font-family: $font-family-base;
+   margin-top: 0;
+}
+
+.container {
+   max-width: 1440px;
+   padding: 0 26px;
+
+   @include breakpoint(medium) {
+      padding: 0 24px;
+   }
+}

@@ -1,0 +1,72 @@
+.page-template-presse {
+   .site-main {
+      padding: 35px 0 0;
+
+      @include breakpoint(medium) {
+         padding: 128px 0 0;
+      }
+
+      @include breakpoint(smaller) {
+         padding: 90px 0 0;
+      }
+
+      h1 {
+         margin-bottom: 23px;
+
+         @include breakpoint(medium) {
+            margin-bottom: 14px;
+         }
+      }
+   } //site amin
+
+   .list-cat-title {
+      font-style: normal;
+      margin-bottom: 10px;
+      line-height: 1.11;
+
+      @include breakpoint(medium) {
+         line-height: 1.25;
+      }
+   }
+
+   .accordion-section {
+      margin-top: 42px;
+      margin-bottom: 103px;
+
+      @include breakpoint(small) {
+         margin-top: 0;
+         margin-bottom: 94px;
+      }
+
+      .list-cat-title {
+         @include breakpoint(small) {
+            margin-bottom: 17px;
+         }
+      }
+
+      .accordion {
+         margin-bottom: 0;
+
+         .accordion-item {
+            @include breakpoint(small) {
+               padding: 7px 0 17px;
+            }
+         }
+
+         .accordion-head {
+            .title,
+            .sub-title {
+               @media only screen and (max-width: 1025px) {
+                  font-weight: 400;
+                  font-size: 22px;
+               }
+
+               @include breakpoint(medium) {
+                  font-size: 20px;
+                  line-height: 1.3;
+               }
+            }
+         }
+      } //accordion
+   }
+}

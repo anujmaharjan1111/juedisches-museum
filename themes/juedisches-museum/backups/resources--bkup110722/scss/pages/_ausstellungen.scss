@@ -1,0 +1,13 @@
+body {
+   &.page-template-ausstellungen {
+      .accordion .accordion-item .accordion-content {
+         .slider-wrapper {
+            position: relative;
+            right: -25px;
+            @include breakpoint(medium) {
+               right: 0;
+            }
+         }
+      } //accord content
+   }
+}

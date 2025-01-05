@@ -1,0 +1,86 @@
+.content-section {
+   &.full-cont-rimg {
+      .row-wrapper {
+         display: flex;
+         flex-wrap: wrap;
+			gap: 26px;
+
+         .text-holder {
+            width: 44%;
+
+            @include breakpoint(medium) {
+               width: 100%;
+            }
+
+            .main-content {
+               p {
+                  &:last-of-type {
+                     margin-bottom: 0;
+                  }
+               }
+            } //main
+         }
+
+         .img-holder-col {
+				width: calc(100% - (44% + 26px));
+
+            @include breakpoint(medium) {
+               width: 100%;
+               text-align: center;
+            }
+
+            .img-n-cap-wrap {
+               display: none;
+            }
+
+            // img {
+            //    width: 633px;
+            //    height: 633px;
+            //    border-radius: 50%;
+            //    border: 3px solid $white;
+            //    object-fit: cover;
+
+            //    @media only screen and (max-width: 1400px) {
+            //       width: 533px;
+            //       height: 533px;
+            //    }
+
+            //    @media only screen and (max-width: 1200px) {
+            //       width: 433px;
+            //       height: 433px;
+            //    }
+
+            //    @media only screen and (max-width: 1025px) {
+            //       width: 360px;
+            //       height: 360px;
+            //    }
+
+            //    @include breakpoint(medium) {
+            //       width: 316px;
+            //       height: 316px;
+            //       border: 2px solid $white;
+            //    }
+
+            //    @media only screen and (max-width: 320px) {
+            //       width: 224px;
+            //       height: 224px;
+            //    }
+            // }
+         } //img-holder
+
+         // .img-caption {
+         //    max-width: 422px;
+         //    margin: 24px auto 30px;
+
+         //    @include breakpoint(small) {
+         //       margin-top: 16px;
+         //       max-width: 174px;
+         //       margin: 16px auto 0;
+         //    }
+         //    p {
+         //       max-width: 100%;
+         //    }
+         // }
+      }
+   } //full content with img section
+}

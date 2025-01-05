@@ -1,0 +1,1 @@
+<div class="single-col">    <?php echo get_sub_field( '_single_column_content' ); ?></div>

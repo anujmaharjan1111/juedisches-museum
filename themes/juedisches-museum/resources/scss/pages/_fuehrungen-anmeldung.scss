@@ -1,0 +1,343 @@
+.fuhrungen-form {
+   .lab-inp-wrap {
+      width: 100%;
+      justify-content: flex-start !important;
+      word-break: break-word;
+
+      label {
+         width: 120px;
+         margin-right: 21px !important;
+         @media only screen and (max-width: 1300px) {
+            width: 90px;
+         }
+
+         @include breakpoint(small) {
+            margin-right: 11px !important;
+         }
+      }
+
+      .wpcf7-form-control-wrap {
+         @include breakpoint(small) {
+            flex: 1 0 0;
+         }
+      }
+
+      input,
+      select {
+         width: 234px;
+         position: relative;
+         top: -7px;
+
+         @include breakpoint(small) {
+            width: 100%;
+         }
+         @media only screen and (max-width: 300px) {
+            font-size: 14px;
+            line-height: 1.3;
+         }
+      }
+
+      input[type="date"] {
+         @media not all and (min-resolution: 0.001dpcm) {
+            @supports (-webkit-appearance: none) {
+               @include breakpoint(small) {
+                  height: 28px;
+                  top: -12px;
+               }
+            }
+         }
+      }
+
+      option {
+         border-bottom: 1px solid $white !important;
+         font-size: 20px;
+
+         @include breakpoint(medium) {
+            font-size: 16px;
+         }
+      }
+
+      &:first-of-type {
+         margin-bottom: 59px;
+      }
+   } //inp labe; wrap
+
+   .double-col {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-between;
+
+      @include breakpoint(small) {
+         flex-wrap: wrap;
+      }
+
+      .lab-inp-wrap {
+         margin-bottom: 0;
+         width: unset;
+         flex-wrap: nowrap;
+
+         @include breakpoint(small) {
+            width: 100%;
+            margin-bottom: 18px;
+         }
+
+         &.col-first {
+            justify-content: flex-start !important;
+         }
+
+         &.col-last {
+            margin-right: 0 !important;
+            width: auto;
+            margin-left: 86px;
+            word-break: break-word;
+
+            @media only screen and (max-width: 1370px) {
+               margin-left: 36px;
+            }
+
+            @media only screen and (max-width: 1100px) {
+               margin-left: 80px;
+            }
+
+            @include breakpoint(medium) {
+               margin-left: 10px;
+            }
+            @include breakpoint(small) {
+               margin-left: 0;
+               width: 100%;
+            }
+
+            label {
+               margin-right: 19px !important;
+               width: 107px;
+
+               @media only screen and (max-width: 1300px) {
+                  width: 90px;
+               }
+
+               @include breakpoint(small) {
+                  margin-right: 11px !important;
+               }
+            }
+         }
+      } //double in lab wrap
+
+      &.first-double {
+         margin-bottom: 14px;
+      }
+
+      &.sec-double {
+         margin-bottom: 50px;
+
+         .col-first {
+            .wpcf7-form-control-wrap {
+               align-self: flex-end;
+            }
+         }
+      }
+
+      &.third-double {
+         margin-bottom: 15px;
+      }
+      &.four-double {
+         margin-bottom: 14px;
+      }
+      &.fifth-double {
+         margin-bottom: 59px;
+      }
+   } //double col
+
+   .tel-wrap {
+      margin-bottom: 15px;
+   }
+
+   .email-wrap {
+      margin-bottom: 55px;
+   }
+
+   .msg-wrap {
+      display: block;
+      margin-bottom: 24px;
+
+      label {
+         width: 100%;
+         margin-bottom: 27px !important;
+         margin-right: 0 !important;
+      }
+
+      .wpcf7-form-control-wrap {
+         width: 100%;
+      }
+
+      textarea {
+         height: 272px;
+         border-radius: 0;
+         background: transparent;
+         border: 1px solid $white;
+         width: 100%;
+         color: $white;
+         padding: 10px;
+
+         @include breakpoint(wide) {
+            width: 100%;
+         }
+
+         @include breakpoint(smaller) {
+            height: 145px;
+         }
+      }
+   } //msg
+
+   .check-wrap {
+      display: block;
+
+      .wpcf7-form-control-wrap {
+         margin-bottom: 14px;
+         width: 100%;
+         flex: auto;
+
+         .wpcf7-form-control {
+            display: inline-block;
+         }
+
+         label {
+            margin-bottom: 0 !important;
+         }
+
+         input {
+            position: absolute;
+            top: 0;
+         }
+
+         &:last-of-type {
+            margin-bottom: 0;
+         }
+      }
+
+      label {
+         width: 100%;
+         margin-bottom: 27px !important;
+         margin-right: 0 !important;
+
+         .wpcf7-list-item-label {
+            padding-left: 46px;
+
+            @include breakpoint(small) {
+               padding-left: 30px;
+            }
+         }
+      }
+   }
+
+   .sub-wrap {
+      margin-top: 0 !important;
+
+      .wpcf7-form-control {
+         padding: 0 !important;
+      }
+      @include breakpoint(smaller) {
+         .wpcf7-spinner {
+            position: relative !important;
+            top: 5px !important;
+         }
+      }
+   } //sub-wrap
+}
+
+.page-template-Mitgliedschaft {
+   &.page-child {
+      .site-main {
+         padding: 0 0 107px;
+         overflow: hidden;
+
+         @include breakpoint(medium) {
+            padding: 138px 0 107px;
+         }
+
+         @include breakpoint(small) {
+            padding: 80px 0 42px;
+         }
+
+         @media screen and (max-width: 991px) and (orientation: landscape) {
+            padding: 120px 0 42px;
+         }
+         @media screen and (max-width: 767px) and (orientation: landscape) {
+            padding: 90px 0 42px;
+         }
+
+         .sub-title.parent {
+            margin-bottom: 15px;
+            padding-bottom: 38px;
+            padding-top: 0;
+            border-bottom: 2px solid $white;
+            border-top: 0;
+         }
+
+         .sub-title.child {
+            margin-bottom: 30px;
+            @include breakpoint(wide) {
+               font-size: 24px;
+               line-height: 1.25;
+            }
+         }
+      } //site-main
+
+      .left-form {
+         width: calc(100% - (456px + 100px));
+         margin-right: 100px;
+
+         @media only screen and (max-width: 1445px) {
+            width: calc(100% - (456px + 70px));
+            margin-right: 70px;
+         }
+
+         @media only screen and (max-width: 1430px) {
+            width: calc(100% - (340px + 90px));
+            margin-right: 90px;
+         }
+
+         @media only screen and (max-width: 1300px) {
+            width: calc(100% - (300px + 50px));
+            margin-right: 50px;
+         }
+
+         @media only screen and (max-width: 1164px) {
+            width: 100%;
+            margin-right: 0;
+         }
+      }
+
+      .right-content {
+         max-width: 456px;
+
+         @media only screen and (max-width: 1430px) {
+            max-width: 340px;
+         }
+
+         @media only screen and (max-width: 1300px) {
+            max-width: 300px;
+         }
+
+         @media only screen and (max-width: 1164px) {
+            max-width: 100%;
+         }
+
+         .right-side-content {
+            h2 {
+               font-style: normal;
+               border-top: 0;
+
+               @include breakpoint(small) {
+                  font-size: 16px;
+                  line-height: 1.25;
+               }
+            } //h2
+
+            a:first-of-type {
+               color: $bright_aqua;
+            }
+         }
+      }
+   } //child
+}

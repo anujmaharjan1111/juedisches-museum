@@ -1,0 +1,54 @@
+/*============================================
+   # Typography
+=============================================*/
+*:focus {
+   outline: 0 !important;
+   border: none;
+   box-shadow: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+   margin-top: 0;
+   color: $white;
+}
+
+a:link,
+a:visited {
+   color: white;
+}
+
+a {
+   color: $white;
+   transition: ease 0.3s;
+
+   &:hover {
+      text-decoration: none;
+      font-style: italic;
+   }
+
+   &:focus {
+      outline: none;
+   }
+}
+
+h1 {
+   font-size: 36px;
+   line-height: 1.21;
+}
+
+h2,
+h3 {
+   font-size: 36px;
+}
+
+p {
+   a {
+      color: $bright_aqua;
+   }
+}

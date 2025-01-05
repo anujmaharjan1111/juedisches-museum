@@ -1,0 +1,262 @@
+.site-footer {
+   // @media screen and (max-width: 1460px) and (min-width: 1438px) {
+   //    .container {
+   //       max-width: 1366px;
+   //       padding: 0 7px;
+   //    }
+   // }
+   color: $magenta;
+   padding: 0 0 44px;
+
+   a,
+   p {
+      color: $magenta;
+   }
+
+   .footer-wrapper {
+      padding: 12px 0 0;
+      // border-top: 1px solid $white;
+      font-size: 20px;
+      line-height: 1.3;
+      @include breakpoint(small) {
+         border-top: 0;
+      }
+   }
+
+   .cols {
+      @media only screen and (min-width: 991px) {
+         // align-self: flex-end;
+
+         &:nth-child(2) {
+            align-self: flex-end;
+         }
+      }
+
+      @include breakpoint(medium) {
+         margin-bottom: 44px;
+      }
+
+      @include breakpoint(smaller) {
+         &:first-child {
+            order: 1;
+         }
+
+         &:nth-child(2) {
+            order: 3;
+         }
+
+         &:nth-child(3) {
+            order: 2;
+            margin-bottom: 37px;
+            @include breakpoint(smaller) {
+               margin-bottom: 10px;
+            }
+         }
+      }
+   } //cols
+
+   ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+   }
+
+   .opening-hours {
+      margin-bottom: 26px;
+   }
+
+   .address {
+      margin-bottom: 25px;
+   }
+
+   .contact-details {
+      p {
+         margin-bottom: 0;
+      }
+   }
+
+   .site-map {
+      position: relative;
+
+      @media only screen and (min-width: 1200px) {
+         top: -7px;
+      }
+
+      p {
+         margin-bottom: 0;
+      }
+   }
+
+   //Social Media
+   .social-media {
+      margin-bottom: 26px;
+
+      a {
+         display: inline-block;
+      }
+   } //social media
+
+   //Form
+   .wpcf7-form {
+      @media only screen and (min-width: 1200px) {
+         padding: 21px 30px 0 44px;
+      }
+
+      @include breakpoint(smaller) {
+         margin-bottom: 26px;
+      }
+
+      p {
+         margin: 0;
+      }
+      .f-title {
+         display: block;
+         font-size: 26px;
+         line-height: 1.23;
+         margin-bottom: 25px;
+         @include breakpoint(small) {
+            font-size: 20px;
+         }
+      }
+      br {
+         display: none;
+      }
+
+      .form-wrap {
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 10px;
+         @include breakpoint(medium) {
+            justify-content: flex-start;
+            margin-bottom: 22px;
+         }
+         @include breakpoint(small) {
+            justify-content: space-between;
+         }
+
+         span.wpcf7-form-control-wrap {
+            width: 215px;
+
+            @media only screen and (max-width: 1100px) {
+               width: 198px;
+            }
+
+            @include breakpoint(small) {
+               text-align: left;
+               flex: 3 0 0;
+               margin-left: 10px;
+            }
+         }
+
+         label {
+            margin-right: 15px;
+            margin-bottom: 0;
+
+            @media only screen and (max-width: 1439px) {
+               width: 35%;
+               word-break: break-word;
+            }
+
+            @include breakpoint(medium) {
+               flex: 1 0 0;
+               width: auto;
+               word-break: keep-all;
+            }
+
+            @include breakpoint(small) {
+               min-width: 25%;
+            }
+            @media only screen and (max-width: 320px) {
+               min-width: 26%;
+               font-size: 16px;
+            }
+         }
+
+         input,
+         textarea {
+            background: transparent;
+            border: 0;
+            border-bottom: 1px solid $magenta;
+            border-radius: 0;
+            color: $magenta !important;
+            position: relative;
+            bottom: 7px;
+            width: 100%;
+
+            &:focus {
+               outline: none;
+               border-top: 0;
+               border-left: 0;
+               border-right: 0;
+            }
+         } //input
+
+         textarea {
+            width: 100%;
+            height: 30px;
+            margin-top: 19px;
+            overflow: hidden;
+            color: $magenta;
+            @include breakpoint(small) {
+               margin-top: 28px;
+            }
+         }
+
+         & + p {
+            margin-top: -6px;
+         }
+      } //form-wrap
+
+      input[type="submit"] {
+         background: transparent;
+         border: 0;
+         border-radius: 0;
+         padding: 0;
+         color: $bright_aqua;
+         text-transform: lowercase;
+         @include breakpoint(smaller) {
+            font-size: 17.7px;
+         }
+      }
+
+      //Invalid success msg
+      .wpcf7-response-output {
+         font-size: 14px;
+         position: absolute;
+         top: calc(100% + 13px);
+         margin: 0 0 !important;
+
+         @media screen and (max-width: 1400px) {
+            padding: 0 4px;
+         }
+         @include breakpoint(wide) {
+            top: 96%;
+         }
+
+         @include breakpoint(medium) {
+            position: static;
+            margin: 20px 0 10px !important;
+         }
+      }
+
+      //Field Require eroor text
+      .wpcf7-not-valid-tip {
+         font-size: 13px;
+         margin: 0 0 !important;
+         max-width: 220px;
+         top: -3px;
+         position: relative;
+         @include breakpoint(medium) {
+            top: 0;
+         }
+      }
+   } //form
+
+   .copyright {
+      margin-top: 19px;
+      margin-left: -6px;
+      @include breakpoint(medium) {
+         margin-left: 0;
+      }
+   }
+}

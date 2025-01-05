@@ -1,0 +1,253 @@
+.page-template-neues-haus {
+	.site-main {
+		padding: 47px 0 0;
+
+		@include breakpoint(medium) {
+			padding: 161px 0 100px;
+		}
+
+		@include breakpoint(small) {
+			padding: 92px 0 100px;
+		}
+	}
+
+	h1 {
+		margin-bottom: 16px;
+
+		@include breakpoint(small) {
+			margin-bottom: 27px;
+		}
+	}
+
+	.mfp-wrap {
+		background-color: $black;
+		width: 100%;
+		z-index: 44;
+		height: 100vh;
+		overflow: auto;
+		// @include breakpoint(small) {
+		//    height: 100vh;
+		//    overflow: auto;
+		// }
+
+		.mfp-content {
+			position: relative;
+			// height: 100vh;
+			padding: 180px 0 40px;
+
+			@include breakpoint(medium) {
+				padding: 240px 0 40px;
+			}
+
+			@include breakpoint(small) {
+				height: calc(100vh + 40px);
+			}
+
+			.mfp-close {
+				position: absolute;
+				top: 60px;
+				right: 46px;
+				font-size: 53px;
+				line-height: 1;
+				width: 65px;
+				height: 60px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0;
+				cursor: pointer;
+
+				@include breakpoint(medium) {
+					top: calc(108px + 20px);
+					font-size: 43px;
+					width: 56px;
+					height: 54px;
+				}
+
+				@include breakpoint(small) {
+					right: 15px;
+				}
+
+				@include breakpoint(smaller) {
+					width: 45px;
+					height: 44px;
+				}
+			}
+			.mfp-figure {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+
+		figure {
+			max-width: 80%;
+			margin: 0 auto;
+			text-align: center;
+			display: inline-block;
+
+			@include breakpoint(small) {
+				max-width: 100%;
+				padding: 0 15px;
+			}
+		}
+
+		.mfp-preloader {
+			display: none;
+		}
+	}
+
+	&.mfp-zoom-out-cur {
+		overflow: hidden;
+		margin-right: -17px;
+		@include breakpoint(wide) {
+			margin-right: 0;
+		}
+	}
+
+	.content-section {
+		padding-bottom: 32px;
+
+		.main-content {
+			display: block;
+
+			@include breakpoint(medium) {
+				margin-bottom: 23px;
+			}
+		}
+
+		.read-more-img {
+			display: none;
+		}
+
+		&.full-cont-rimg .row-wrapper .img-holder .img-n-cap-wrap {
+			display: block;
+		}
+	} //content
+
+	.accordion {
+		.accordion-item {
+			@include breakpoint(small) {
+				padding: 9px 0 11px;
+
+				&:before {
+					top: 23px;
+				}
+
+				&:after {
+					top: 17px;
+				}
+
+				&:last-of-type {
+					border-bottom: 1px solid $white;
+
+					&.icon-open {
+						border-bottom: 0;
+					}
+				}
+			}
+
+			&.acc-type-image-right {
+				.accordion-content {
+					padding: 0 0 106px;
+
+					@include breakpoint(small) {
+						padding: 0 0 24px;
+					}
+				}
+
+				.cl-imgr-holder {
+					@include breakpoint(medium) {
+						flex-direction: column-reverse;
+					}
+
+					.cl-holder {
+						max-width: 606px;
+						margin-right: 74px;
+						margin-top: 74px;
+
+						@media only screen and (max-width: 1300px) {
+							max-width: calc(100% - (533px + 74px));
+						}
+
+						@media only screen and (max-width: 1025px) {
+							margin-right: 64px;
+							max-width: calc(100% - (360px + 64px));
+						}
+
+						@include breakpoint(medium) {
+							margin-bottom: 0;
+							margin-top: 25px;
+							max-width: 100%;
+							margin-right: 0;
+						}
+
+						h3 {
+							font-weight: 400;
+							line-height: 1.11;
+							margin-bottom: 57px;
+							@media only screen and (max-width: 1300px) {
+								font-size: 36px;
+							}
+
+							@include breakpoint(small) {
+								font-size: 30px;
+								line-height: 1.2;
+								margin-bottom: 27px;
+							}
+						}
+
+						p {
+							line-height: 1.25;
+							margin-bottom: 30px;
+
+							@include breakpoint(small) {
+								line-height: 1.3;
+								margin-bottom: 26px;
+
+								&:last-of-type {
+									margin-bottom: 0;
+								}
+							}
+
+							a {
+								color: $white;
+							}
+						}
+					} //c-holder
+
+					.imgr-holder {
+						padding-top: 30px;
+						margin-left: 0;
+
+						@include breakpoint(medium) {
+							margin: 24px auto 0;
+							text-align: center;
+							padding-top: 0;
+						}
+
+						img {
+							@include breakpoint(medium) {
+								width: 316px;
+								height: 316px;
+							}
+							@media only screen and (max-width: 320px) {
+								width: 224px;
+								height: 224px;
+							}
+						}
+
+						.img-caption {
+							p {
+								@include breakpoint(small) {
+									font-size: 12px;
+									line-height: 1.16;
+								}
+							}
+						}
+					}
+				} //holder
+			} //img right
+		} //item
+	} //accordion
+}

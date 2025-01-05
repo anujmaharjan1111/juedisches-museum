@@ -1,0 +1,133 @@
+/*============================================
+   # Common Title
+=============================================*/
+
+.page-title {
+   font-size: 36px;
+   line-height: 1.11;
+   text-align: center;
+   font-style: italic;
+   margin-bottom: 24px;
+   font-weight: 400;
+
+   @include breakpoint(small) {
+      font-size: 26px;
+      line-height: 1.15;
+      margin-bottom: 16px;
+   }
+}
+
+.title,
+.sub-title {
+   font-size: 36px;
+   font-weight: 700;
+   font-style: italic;
+   @include breakpoint(smaller) {
+      font-size: 30px;
+   }
+}
+
+.title {
+   line-height: 1.11;
+   font-weight: 700;
+   @include breakpoint(smaller) {
+      line-height: 1.2;
+   }
+}
+
+.sub-title {
+   line-height: 1.16;
+   font-weight: 400;
+   @include breakpoint(smaller) {
+      line-height: 1.2;
+   }
+}
+
+.list-cat-title {
+   margin-bottom: 13px;
+   @media only screen and (max-width: 1300px) {
+      font-size: 24px;
+      line-height: 1.16;
+   }
+   @include breakpoint(medium) {
+      margin-bottom: 9px;
+   }
+}
+
+/*============================================
+   # Desktop Hide MB Show
+=============================================*/
+.mb-show {
+   display: none;
+
+   @include breakpoint(small) {
+      display: block;
+   }
+}
+
+/*============================================
+   # Common Site Main
+=============================================*/
+.site-main {
+   padding: 34px 0 0;
+
+   @include breakpoint(medium) {
+      padding: 123px 0 60px;
+   }
+
+   @include breakpoint(small) {
+      padding: 92px 0 100px;
+   }
+}
+
+/*============================================
+   # Page Template Site Main And title common styling
+=============================================*/
+.page-template {
+   .site-main {
+      padding: 6px 0 0;
+      @include breakpoint(medium) {
+         padding: 123px 0 100px;
+      }
+      @include breakpoint(small) {
+         padding: 92px 0 100px;
+      }
+   }
+
+   h1 {
+      margin-bottom: 0;
+      @media only screen and (max-width: 1300px) {
+         font-size: 28px;
+         line-height: 1.16;
+      }
+
+      @include breakpoint(wide) {
+         font-size: 26px;
+      }
+
+      @include breakpoint(medium) {
+         margin-bottom: 15px;
+      }
+   }
+}
+
+.catelog-title {
+   margin-bottom: 24px;
+   a {
+      color: $bright_aqua;
+   }
+
+   .sub-title {
+      font-style: normal;
+      color: $bright_aqua;
+
+      &:hover {
+         font-style: italic;
+      }
+   }
+}
+
+.clear-btn {
+   cursor: pointer;
+   font-style: italic;
+}

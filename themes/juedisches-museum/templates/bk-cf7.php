@@ -1,0 +1,67 @@
+<div class="cont-form-row-wrap">
+   <div class="cols left">
+      <div class="common-cont-wrap cont-radio-wrap">
+         <div class="lab-inp-wrap">
+            [radio gender use_label_element default:1 "Frau" "Herr"]
+         </div>
+      </div>
+
+      <div class="common-cont-wrap cont-input-wrap">  
+         <div class="lab-inp-wrap">
+         <label>Name*</label>[text* last-name] 
+         </div>
+
+         <div class="lab-inp-wrap">
+         <label>Vorname*</label>[text* first-name]
+         </div>
+
+         <div class="lab-inp-wrap">
+         <label>Adresse*</label>[text* adresse]
+         </div>
+
+         <div class="lab-inp-wrap">
+         <label>PLZ Ort*</label>[text* zip-code]
+         </div>
+
+         <div class="lab-inp-wrap">
+         <label>Land*</label>[text* country]
+         </div>
+
+         <div class="lab-inp-wrap">
+         <label>Mail*</label>[email* email]
+         </div>
+
+         <div class="lab-inp-wrap">
+         <label>Telefon</label>[tel tel]
+         </div>
+      </div>
+
+      <div class="common-cont-wrap cont-radio-wrap">
+         <div class="lab-inp-wrap has-radio">
+            <div class="wrap-half">
+            [radio group-type use_label_element default:1 "Telefon" "Kollektiv–/ Familie" "Unternehmen" "Gönner:in" "auf Lebenszeit"]
+            </div>
+            <div class="wrap-half">
+                  <ul>
+                     <li>Fr. 40.–</li>
+                     <li>Fr. 70.–</li>
+                     <li>Fr. 500.–</li>
+                     <li>Fr. 2000.–</li>
+                     <li>15-facher Beitrag</li>
+                  </ul>
+            </div>
+         </div>
+      </div>
+
+   </div>
+   <div class="cols right">
+      <div class="cont-radio-wrap">
+         <div class="lab-inp-wrap">
+         [radio sub-notice-type use_label_element default:1 "Newsletter abonnieren Wie möchten Sie über unser aktuelles Programm informiert werden?*" "per Email" "per Post"]
+         </div>
+      </div>
+      <div class="sub-wrap">
+      [submit "Formular senden"]
+      </div>
+   </div>
+</div>

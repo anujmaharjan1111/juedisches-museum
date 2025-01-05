@@ -1,0 +1,57 @@
+//Fonts
+@import "base/fonts";
+
+// abstracts (global variable, function, mixin and placeholder)
+
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+// vendors (CSS files from external libraries and frameworks)
+
+@import "vendors/bootstrap";
+@import "vendors/slick";
+@import "vendors/magnific-popup.css";
+
+// base (boilerplate code)
+
+// @import 'base/reset';
+@import "base/base";
+@import "base/typography";
+
+// layout (everything that takes part in laying out the site)
+@import "layout/common";
+@import "layout/blog-list";
+@import "layout/read-more-list";
+@import "layout/accordion-parts/accord-master";
+@import "layout/lr-cont-img";
+@import "layout/full-cont-section";
+@import "layout/full-content-img";
+@import "layout/default";
+
+// component (for smaller components like buttons, carousel, widgets, loader)
+@import "components/wp-classes";
+@import "components/header";
+@import "components/animation-keyframe";
+@import "components/footer";
+@import "components/form";
+@import "components/page-navigation";
+@import "components/to-top";
+
+//page (page-specific styles)
+@import "pages/single-post";
+@import "pages/ausstellungen";
+@import "pages/fuhrungen";
+@import "pages/veranstaltungen";
+@import "pages/sammlung";
+@import "pages/uber-uns";
+@import "pages/neus-haus";
+@import "pages/presse";
+@import "pages/besuch";
+@import "pages/shop";
+@import "pages/single-product";
+@import "pages/mitgliedschaft";
+@import "pages/fuehrungen-anmeldung";
+@import "pages/impressum";
+@import "pages/404";
+
+//themes

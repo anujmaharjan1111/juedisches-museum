@@ -1,0 +1,691 @@
+body {
+   &.page-template-ausstellungen.page-id-5192,
+   &.page-template-engagement {
+      .site {
+         @include breakpoint(medium) {
+            padding: 138px 0 107px;
+         }
+      }
+
+      .accordion-section {
+         padding: 40px 0 40px;
+      }
+
+      .accordion {
+         margin-bottom: 0;
+
+         .accordion-item {
+            .accordion-head {
+               float: unset;
+               width: 100%;
+               .title {
+                  font-weight: 400;
+               }
+            }
+
+            .accordion-content {
+               margin-top: 29px;
+               max-width: 100%;
+
+               .full-LHI-RHC-cap-form {
+                  .content-img-holder {
+                     display: flex;
+                     flex-wrap: wrap;
+                     margin-bottom: 40px;
+
+                     .img-holder-with-cont {
+                        width: 400px;
+                        margin-right: 46px;
+                        @include breakpoint(medium) {
+                           width: 100%;
+                           margin-right: 0;
+                           margin-bottom: 46px;
+                        }
+
+                        .img-profile-wraper {
+                           display: flex;
+                           flex-wrap: wrap;
+
+                           .img-wrap {
+                              width: 370px;
+                              height: 370px;
+                              border-radius: 50%;
+                              border: 3px solid $white;
+                              overflow: hidden;
+                              margin-bottom: 18px;
+
+                              @include breakpoint(wide) {
+                                 width: 320px;
+                                 height: 320px;
+                              }
+
+                              @media screen and (max-width: 1024px) {
+                                 width: 280px;
+                                 height: 280px;
+                              }
+
+                              @include breakpoint(iPhone5) {
+                                 width: 220px;
+                                 height: 220px;
+                              }
+
+                              img {
+                                 width: 100%;
+                                 height: 100%;
+                                 object-fit: cover;
+                              }
+                           } //img wrap
+
+                           .author {
+                              display: block;
+                              margin-left: auto;
+                              align-self: flex-end;
+                              word-break: break-word;
+                              width: 186px;
+                              @include breakpoint(medium) {
+                                 margin-left: 0;
+                              }
+                              @include breakpoint(small) {
+                                 font-size: 20px;
+                                 line-height: 1.3;
+                                 font-weight: 400;
+                              }
+                              h3 {
+                                 @include breakpoint(small) {
+                                    font-size: 24px;
+                                 }
+                              }
+                           }
+                        } //img pro wrapper
+                     } //img holder
+
+                     .content-holder-with-cont {
+                        width: calc(100% - (400px + 46px));
+                        @include breakpoint(medium) {
+                           width: 100%;
+                        }
+
+                        h3 {
+                           font-style: italic;
+                           margin-bottom: 20px;
+
+                           @include breakpoint(small) {
+                              font-size: 26px;
+                           }
+                        }
+                     } //content holder
+                  } //content img holder
+
+                  .full-content {
+                     @media screen and (min-width: 768px) {
+                        font-size: 26px;
+                     }
+
+                     h3 {
+                        color: $magenta;
+                        margin-bottom: 36px;
+                        @include breakpoint(small) {
+                           font-size: 24px;
+                           margin-bottom: 20px;
+                        }
+                     }
+
+                     h5 {
+                        font-size: 26px;
+                        line-height: 1.15;
+                     }
+                  } //fuil content
+               } //full LHI RHC CAP Form
+            }
+            &:first-of-type {
+               .accordion-content {
+                  padding-left: 76px;
+
+                  @include breakpoint(small) {
+                     padding-left: 0;
+                  }
+               }
+            }
+         } //accordion item
+      } //accordion
+
+      .form-part {
+         margin-top: 100px;
+         .rows {
+            display: flex;
+            flex-wrap: wrap;
+         }
+
+         .form-title {
+            font-weight: 400;
+            font-style: italic;
+            @media screen and (min-width: 768px) {
+               font-size: 36px;
+               line-height: 1.11;
+            }
+         }
+
+         //Right content
+
+         .right-content {
+            max-width: 409px;
+            @media only screen and (max-width: 1200px) {
+               max-width: 360px;
+            }
+
+            @media only screen and (max-width: 1150px) {
+               max-width: 100%;
+            }
+
+            h2,
+            p {
+               font-size: 20px;
+            }
+
+            h2 {
+               font-style: italic;
+               font-size: 26px;
+               line-height: 1.15;
+               margin-bottom: 23px;
+
+               @include breakpoint(small) {
+                  padding-top: 14px;
+                  border-top: 1px solid $white;
+                  font-size: 24px;
+                  line-height: 1.25;
+               }
+            }
+
+            p {
+               line-height: 1.3;
+               margin-bottom: 26px;
+
+               @include breakpoint(small) {
+                  font-size: 16px;
+                  line-height: 1.25;
+                  margin-bottom: 19px;
+               }
+            }
+         }
+
+         .right-side-content {
+            h2 {
+               font-style: italic;
+               font-weight: 400;
+               @media screen and (min-width: 768px) {
+                  font-size: 36px;
+                  line-height: 1.11;
+               }
+            }
+         }
+
+         //left form
+
+         .left-form {
+            width: calc(100% - (409px + 123px));
+            margin-right: 123px;
+
+            @media only screen and (max-width: 1400px) {
+               width: calc(100% - (409px + 50px));
+               margin-right: 50px;
+            }
+
+            @media only screen and (max-width: 1200px) {
+               width: calc(100% - (360px + 50px));
+            }
+
+            @media only screen and (max-width: 1150px) {
+               width: 100%;
+               margin-right: 0;
+               margin-bottom: 64px;
+            }
+
+            @include breakpoint(small) {
+               margin-bottom: 29px;
+            }
+         } //left from
+
+         //form
+
+         .wpcf7 {
+            br {
+               display: none;
+            }
+
+            .wpcf7-form {
+               font-size: 26px;
+            }
+
+            .form-rows {
+               display: flex;
+               flex-wrap: wrap;
+
+               .wpcf7-not-valid-tip {
+                  margin-top: 10px;
+                  font-size: 13px;
+               }
+
+               .cont-form {
+                  margin-right: 98px;
+                  max-width: calc(100% - (98px + 320px));
+
+                  @media screen and (max-width: 1230px) {
+                     margin-right: 54px;
+                     max-width: calc(100% - (54px + 320px));
+                  }
+
+                  @include breakpoint(small) {
+                     max-width: 100%;
+                     margin-right: 0;
+                     order: 2;
+                  }
+               }
+
+               .news-letter {
+                  max-width: 320px;
+                  @include breakpoint(small) {
+                     order: 3;
+                  }
+               }
+
+               .pricing {
+                  width: 100%;
+                  // padding-left: 13px;
+
+                  @include breakpoint(small) {
+                     order: 1;
+                  }
+               }
+            } //row wrap
+
+            /* ================================================================
+         # Common stylings
+      ================================================================== */
+
+            //__Label & input wrapper
+            .lab-inp-wrap {
+               font-size: 26px;
+               line-height: 1.15;
+               display: flex;
+               flex-wrap: wrap;
+               justify-content: space-between;
+               margin-bottom: 29px;
+               @media only screen and (max-width: 1300px) {
+                  font-size: 22px;
+               }
+
+               @include breakpoint(small) {
+                  font-size: 18px;
+                  line-height: 1.44;
+               }
+
+               label {
+                  margin: 0;
+               }
+
+               span {
+                  display: block;
+               }
+
+               &:last-of-type {
+                  margin-bottom: 0;
+               }
+            } //control wrap
+
+            .gender-wrap {
+               display: block;
+
+               .wpcf7-form-control-wrap {
+                  width: auto !important;
+               }
+
+               .wpcf7-form-control {
+                  display: flex;
+                  flex-wrap: wrap;
+                  margin-bottom: 30px;
+
+                  .wpcf7-list-item {
+                     margin-bottom: 6px;
+                  }
+               }
+            }
+
+            //---Submit wrap
+            .sub-wrap {
+               margin-top: 24px;
+
+               @include breakpoint(small) {
+                  margin-top: 46px;
+                  position: relative;
+               }
+
+               .wpcf7-form-control {
+                  padding: 0 0 0px 42px;
+                  background: transparent;
+                  border: 0;
+                  color: $bright_aqua;
+
+                  @include breakpoint(small) {
+                     padding: 0;
+                     font-size: 20px;
+                     line-height: 1.2;
+                  }
+               }
+
+               .wpcf7-spinner {
+                  @include breakpoint(smaller) {
+                     position: absolute;
+                     top: 0;
+                     right: 0;
+                  }
+               }
+            } //sub wrap
+
+            //--contact input wraps
+            .cont-input-wrap {
+               .lab-inp-wrap {
+                  flex-wrap: nowrap;
+                  justify-content: flex-start;
+
+                  @include breakpoint(small) {
+                     font-size: 20px;
+                     line-height: 1.3;
+                     margin-bottom: 22px;
+                  }
+               }
+
+               label {
+                  width: 120px;
+                  word-break: break-word;
+
+                  @include breakpoint(small) {
+                     margin-right: 12px;
+                  }
+                  @media only screen and (max-width: 322px) {
+                     font-size: 18px;
+                  }
+               }
+
+               //cf7 input wrap
+               .wpcf7-form-control-wrap {
+                  width: 268px;
+
+                  @include breakpoint(medium) {
+                     width: 60%;
+                  }
+
+                  @include breakpoint(smaller) {
+                     width: 100%;
+                  }
+
+                  input {
+                     width: 100%;
+                     margin-top: -7px;
+                     display: block;
+                  }
+               } //control wrap
+            } //cont input wrap
+
+            //--contact radio wraps
+            .cont-radio-wrap {
+               //Gender radio
+
+               .gender {
+                  margin-bottom: 35px;
+                  display: block;
+
+                  @include breakpoint(small) {
+                     margin-bottom: 15px;
+                  }
+
+                  label {
+                     @include breakpoint(small) {
+                        width: auto;
+                        margin-right: 0;
+                     }
+                  }
+
+                  .lab-inp-wrap {
+                     @include breakpoint(small) {
+                        font-size: 20px;
+                        line-height: 1.2;
+                        margin-bottom: 3px !important;
+                     }
+                  } //wrap
+
+                  .wpcf7-form-control {
+                     display: flex;
+
+                     @include breakpoint(smaller) {
+                        justify-content: center;
+                     }
+                  } //conrol
+
+                  .wpcf7-radio {
+                     .wpcf7-list-item {
+                        margin-right: 20px;
+
+                        &:last-of-type {
+                           margin-right: 0;
+                        }
+                     }
+                  } //radio
+
+                  .wpcf7-list-item-label {
+                     @include breakpoint(small) {
+                        padding-left: 22px;
+
+                        &:after {
+                           left: 5px;
+                        }
+                     }
+                  }
+
+                  .wpcf7-list-item.first {
+                     margin-right: 5px;
+                     @include breakpoint(small) {
+                        margin-right: 20px;
+                     }
+
+                     label {
+                        margin-bottom: 0;
+                     }
+                  } //list
+               } //gender form control
+
+               // .has-radio {
+               //    padding-top: 64px;
+               //    flex-wrap: nowrap;
+               //    justify-content: flex-start;
+               //    @include breakpoint(smaller) {
+               //       justify-content: space-between;
+               //    }
+
+               //    @include breakpoint(small) {
+               //       padding-top: 0;
+               //    }
+
+               //    .wpcf7-list-item {
+               //       margin-bottom: 18px;
+
+               //       @include breakpoint(small) {
+               //          margin-bottom: 0;
+               //       }
+
+               //       .wpcf7-form-control {
+               //          width: 100%;
+               //       }
+
+               //       .wpcf7-list-item-label {
+               //          padding-left: 40px;
+
+               //          @include breakpoint(small) {
+               //             padding-left: 37px;
+               //          } //small
+               //       } //radio label
+               //    } //list
+
+               //    ul {
+               //       padding: 0;
+               //       margin: 0;
+               //       list-style: none;
+               //       line-height: 1.15;
+               //       word-break: break-word;
+               //       @media screen and (min-width: 767px) {
+               //          width: 235px;
+               //       }
+
+               //       li {
+               //          margin-bottom: 18px;
+               //          margin-left: 38px;
+
+               //          @include breakpoint(small) {
+               //             margin-bottom: 5px;
+               //          }
+
+               //          @include breakpoint(smaller) {
+               //             margin-left: 0;
+               //          }
+               //       }
+               //    } //ul
+               // } //has radio
+            } //cont radio wrap
+
+            /* ================================================================
+         # Form column
+      ================================================================== */
+            .news-letter {
+               .lab-inp-wrap {
+                  margin-bottom: 23px;
+
+                  p {
+                     &:first-of-type {
+                        padding-left: 40px;
+                        @include breakpoint(small) {
+                           padding-left: 32px;
+                        }
+                     }
+
+                     &:last-of-type {
+                        @include breakpoint(small) {
+                           width: 100%;
+                        }
+                     }
+                  } //p
+               } //inp wrap
+
+               .sub-type {
+                  .wpcf7-form-control {
+                     @include breakpoint(small) {
+                        margin-left: 37px;
+                     }
+                  }
+               }
+
+               .wpcf7-form-control {
+                  @include breakpoint(small) {
+                     display: flex;
+                     flex-wrap: wrap;
+                  }
+               }
+
+               .wpcf7-list-item {
+                  margin-bottom: 13px;
+                  @include breakpoint(small) {
+                     margin-bottom: 0;
+                  }
+
+                  &:first-of-type {
+                     margin-bottom: 31px;
+                     @include breakpoint(small) {
+                        margin-bottom: 0;
+                        margin-right: 42px;
+                     }
+                  }
+                  &:last-of-type {
+                     margin-bottom: 0;
+                  }
+
+                  .wpcf7-list-item-label {
+                     @include breakpoint(small) {
+                        padding-left: 32px;
+                     }
+                  }
+
+                  @include breakpoint(small) {
+                     margin-bottom: 0;
+                  }
+               } //radio list
+            } //news letter
+
+            .pricing {
+               @include breakpoint(small) {
+                  margin-bottom: 49px;
+               }
+
+               .wrap-half {
+                  &:last-of-type {
+                     @include breakpoint(smaller) {
+                        width: 32%;
+                     }
+                  }
+               }
+
+               .has-matching-elements {
+                  display: flex;
+                  flex-wrap: wrap;
+                  max-width: 489px;
+                  padding-top: 64px;
+
+                  @include breakpoint(small) {
+                     padding-top: 0;
+                  }
+
+                  // display: none;
+
+                  @include breakpoint(smaller) {
+                     max-width: 100%;
+                     justify-content: space-between;
+                  }
+
+                  .wpcf7-list-item {
+                     width: 50%;
+                     word-break: break-word;
+                     margin-bottom: 18px;
+                     @include breakpoint(small) {
+                        font-size: 18px;
+                        line-height: 1.44;
+                        margin-bottom: 0;
+                     }
+
+                     label {
+                        margin-bottom: 0;
+                     }
+
+                     &:nth-child(even) {
+                        @include breakpoint(smaller) {
+                           width: 47%;
+                        }
+                        .wpcf7-list-item-label {
+                           padding-left: 38px;
+                           pointer-events: none;
+                        }
+
+                        .wpcf7-list-item-label:before,
+                        .wpcf7-list-item-label:after {
+                           display: none;
+                        }
+                     } //evens
+                  }
+               } //has matching elements
+            }
+
+            .cont-form {
+               @include breakpoint(small) {
+                  margin-bottom: 50px;
+               }
+            }
+         } //wp-cf7
+      } //form part
+   } //page tempate austenn
+}

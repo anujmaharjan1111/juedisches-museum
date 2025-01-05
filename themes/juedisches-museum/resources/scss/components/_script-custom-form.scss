@@ -1,0 +1,715 @@
+.script-form-custom-cls {
+   #tamaro-widget {
+      &.tamaro-widget {
+         background-color: transparent !important;
+
+         .widget-content {
+            font-family: $font-family-base;
+            font-weight: 400;
+
+            section.widget-block {
+               .widget-block-header {
+                  .title {
+                     align-items: center;
+                     margin-bottom: 44px;
+
+                     .position {
+                        font-size: 36px;
+                        line-height: 1.11;
+                        font-weight: 400;
+                        color: $text_color;
+                        width: 40px;
+                        height: 40px;
+                        background-color: $bright_aqua;
+
+                        @include breakpoint(medium) {
+                           font-size: 30px;
+                        }
+                        @include breakpoint(smaller) {
+                           font-size: 22px;
+                        }
+
+                        @include breakpoint(iPhone5) {
+                           font-size: 18px;
+                        }
+                     }
+
+                     .text {
+                        font-size: 36px;
+                        line-height: 1.11;
+                        font-weight: 400;
+                        color: $bright_aqua;
+                        margin-left: 24px !important;
+                        @include breakpoint(medium) {
+                           font-size: 30px;
+                        }
+                        @include breakpoint(smaller) {
+                           font-size: 22px;
+                        }
+                        @include breakpoint(iPhone5) {
+                           font-size: 18px;
+                        }
+                     }
+                  } //title
+
+                  & + .widget-block-content {
+                     margin-top: 0;
+                  }
+               } //wide block header
+
+               .widget-block-content {
+                  max-width: 1090px;
+                  margin-top: 0;
+                  padding-left: 121px;
+
+                  @include breakpoint(wide) {
+                     padding-left: 0;
+                  }
+
+                  // ------------- Payment Type Radio ------------------
+                  .payment-payment-types {
+                     .header {
+                        background: rgba(0, 240, 255, 0.6);
+
+                        .md-checkable-icon-wrapper {
+                           margin-right: 28px;
+
+                           @include breakpoint(extrasmall) {
+                              margin-right: 18px;
+                           }
+                        }
+
+                        button {
+                           .link {
+                              background: transparent;
+                              color: $white;
+                              border-color: $white;
+                           }
+                        }
+
+                        svg {
+                           rect {
+                              fill: transparent;
+                              stroke: $white;
+                           }
+                           polyline {
+                              stroke: $white;
+                              stroke-width: 1px;
+                           }
+                        } //svg
+
+                        .text,
+                        .title {
+                           font-size: 26px;
+                           line-height: 1;
+                           font-weight: 400;
+                           color: $white;
+                           @include breakpoint(medium) {
+                              font-size: 20px;
+                           }
+                        }
+                     } //header
+
+                     .main {
+                        .label-radio-block-inner {
+                           font-size: 26px;
+                           line-height: 1;
+                           font-weight: 400;
+                           color: $bright_aqua;
+                           @include breakpoint(medium) {
+                              font-size: 20px;
+                           }
+
+                           .md-checkable-icon-wrapper {
+                              margin-right: 24px;
+
+                              svg {
+                                 width: 30px;
+                                 height: 30px;
+
+                                 @include breakpoint(extrasmall) {
+                                    width: 22px;
+                                    height: 22px;
+                                 }
+
+                                 circle {
+                                    stroke: $bright_aqua;
+                                    fill: transparent;
+
+                                    &.md-inner-circle {
+                                       fill: $bright_aqua;
+                                    }
+                                 } //circle
+                              } //svg
+                           } //icon wrapper
+                        } //label radio
+
+                        .info-toggle {
+                           .header {
+                              background-color: transparent;
+
+                              .icon {
+                                 margin-right: 24px;
+                                 width: 30px;
+                                 height: 30px;
+                                 @include breakpoint(extrasmall) {
+                                    width: 22px;
+                                    height: 22px;
+                                 }
+                              }
+
+                              svg {
+                                 width: 100%;
+                                 height: 100%;
+                                 g {
+                                    fill: #ffd18f;
+                                 }
+                              }
+                              .title {
+                                 color: #ffd18f;
+                                 margin-left: 0;
+                              }
+                           } //header
+                        } //infor toggle
+                     } //main
+                  } //payment type
+                  // ------------- End of Payment Type Radio ------------------
+
+                  // ------------- Payment Radio ------------------
+                  .payment-amounts {
+                     .label-radio-block {
+                        .md-checkable-icon-wrapper {
+                           width: 30px;
+                           height: 30px;
+                           margin-right: 24px;
+                           @include breakpoint(extrasmall) {
+                              width: 22px;
+                              height: 22px;
+                              margin-right: 14px;
+                           }
+
+                           svg {
+                              width: 100%;
+                              height: 100%;
+
+                              circle {
+                                 stroke: $bright_aqua;
+                                 fill: transparent;
+                              }
+
+                              polyline {
+                                 stroke: transparent;
+                              }
+                           } //svg
+                        } //md radio wrapper
+
+                        .code,
+                        .value,
+                        .value label {
+                           font-weight: 400;
+                           color: $bright_aqua;
+                        }
+
+                        .code {
+                           font-size: 26px;
+                           line-height: 1;
+                           @include breakpoint(medium) {
+                              font-size: 20px;
+                           }
+                        }
+
+                        .value,
+                        .value label {
+                           font-size: 36px;
+                           line-height: 1.11;
+                           @include breakpoint(medium) {
+                              font-size: 30px;
+                           }
+                           @include breakpoint(smaller) {
+                              font-size: 22px;
+                           }
+                           @include breakpoint(iPhone5) {
+                              font-size: 18px;
+                           }
+                        }
+
+                        &.input-checked {
+                           background: rgba(0, 240, 255, 0.6);
+
+                           .md-checkable-icon-wrapper {
+                              svg {
+                                 circle {
+                                    stroke: $white;
+                                 }
+                              } //svg
+                           } //md radio wrapper
+
+                           .code,
+                           .value {
+                              color: $white;
+                           }
+                        } //input checked
+                     } //radio list
+                  } //amounts
+
+                  .payment-recurring-intervals {
+                     border-color: $bright_aqua;
+                  }
+
+                  .info-toggle {
+                     .header {
+                        border-color: $bright_aqua;
+                     }
+                  } //info toggle
+
+                  .label-radio-block,
+                  .label-checkbox-block {
+                     border-color: $bright_aqua;
+                     background: transparent;
+
+                     .label-radio-block-inner {
+                        border-color: $bright_aqua;
+                     }
+                  } //labels
+               } //widget content
+
+               /* ------------------------- logo Select section --------------------------- */
+               &.payment-payment-methods-block {
+                  .widget-block-content {
+                     .payment-methods {
+                        .payment-method {
+                           width: 33.33%;
+                           flex-direction: column;
+                           justify-content: center;
+                           border-color: $bright_aqua;
+                           padding: 34px 10px 23px;
+
+                           @include breakpoint(medium) {
+                              width: 50%;
+                           }
+
+                           @include breakpoint(iPhone5) {
+                              width: 100%;
+                           }
+
+                           .header {
+                              background: rgba(0, 240, 255, 0.6);
+                           }
+
+                           .text {
+                              font-size: 26px;
+                              line-height: 1;
+                              font-weight: 400;
+                              color: $white;
+                           }
+
+                           .image {
+                              width: 92px;
+                              height: 92px;
+                              margin-bottom: 8px;
+                              @include breakpoint(smaller) {
+                                 width: 80px;
+                                 height: 80px;
+                              }
+                           }
+
+                           .text {
+                              font-size: 26px;
+                              line-height: 1.15;
+                              font-weight: 400;
+                              color: $white;
+                              padding: 0 !important;
+
+                              @include breakpoint(medium) {
+                                 font-size: 20px;
+                              }
+                           }
+
+                           &:hover {
+                              background-color: transparent;
+                           }
+                        } //payment logo cols
+                     } //payemnt logo row
+
+                     .payment-payment-method-details {
+                        > .footer {
+                           background: rgba(0, 240, 255, 0.6);
+                           border-color: $bright_aqua;
+
+                           svg {
+                              g {
+                                 stroke: $white;
+                              }
+                           }
+
+                           .text {
+                              font-size: 26px;
+                              line-height: 1;
+                              font-weight: 400;
+                              color: $white;
+
+                              @include breakpoint(medium) {
+                                 font-size: 20px;
+                              }
+
+                              p {
+                                 color: $white;
+                              }
+                           }
+                        } //header
+                     }
+
+                     .payment-method-details {
+                        border-color: $bright_aqua;
+
+                        > .header {
+                           background: rgba(0, 240, 255, 0.6);
+
+                           .text {
+                              font-size: 26px;
+                              line-height: 1;
+                              font-weight: 400;
+                              color: $white;
+                              @include breakpoint(medium) {
+                                 font-size: 20px;
+                              }
+                              p {
+                                 color: $white;
+                              }
+                           }
+                        } //header
+
+                        > .main {
+                           border-color: $bright_aqua;
+                           .text,
+                           .title {
+                              color: $white;
+                           }
+
+                           svg {
+                              circle {
+                                 &.md-outer-circle {
+                                    fill: transparent;
+                                    stroke: $bright_aqua;
+                                 }
+
+                                 &.md-inner-circle {
+                                    fill: $bright_aqua;
+                                    stroke: $bright_aqua;
+                                 }
+                              }
+                           }
+                        }
+
+                        .form-block {
+                           margin-top: 0;
+
+                           .field-block {
+                              background: transparent;
+                              border: 0;
+                              border-bottom: 1px solid $bright_aqua;
+                              padding: 14px 0 14px;
+                              margin-bottom: 14px;
+
+                              input,
+                              label,
+                              select,
+                              textarea,
+                              .footer .text {
+                                 font-size: 26px;
+                                 line-height: 1.15;
+                                 font-weight: 400;
+                                 color: $bright_aqua;
+                                 @include breakpoint(medium) {
+                                    font-size: 20px;
+                                 }
+                              }
+
+                              input,
+                              textarea,
+                              select {
+                                 padding: 0;
+                              }
+
+                              .label-checkbox-block {
+                                 border: 0;
+                                 top: 50%;
+                                 transform: translateY(-50%);
+                              }
+
+                              .footer {
+                                 border: 0;
+
+                                 .text {
+                                    padding: 0;
+                                 }
+                              }
+                           } //field block
+
+                           .error-message {
+                              padding-left: 0;
+                           }
+
+                           &.select-wrapper {
+                              .label-block {
+                                 display: none;
+                              }
+
+                              select {
+                                 color: $bright_aqua !important;
+                                 -webkit-appearance: none;
+                                 -moz-appearance: none;
+                                 appearance: none;
+                              }
+                           } //form block
+
+                           &.input-focused,
+                           &.input-filled {
+                              .field-block {
+                                 label {
+                                    visibility: hidden;
+                                    opacity: 0;
+                                 }
+                              }
+                           } //focused input
+
+                           &.stored_customer_donation_receipt {
+                              .field-block {
+                                 border: 0;
+                              }
+
+                              label {
+                                 align-items: center;
+                                 position: static;
+                                 transform: unset !important;
+                                 padding: 0 0 20px;
+                              }
+
+                              .md-checkable-icon-wrapper {
+                                 margin-right: 19px;
+
+                                 svg {
+                                    rect {
+                                       fill: transparent;
+                                       stroke: $bright_aqua;
+                                    }
+
+                                    polyline {
+                                       stroke: $bright_aqua;
+                                    }
+                                 } //svg
+                              }
+                           }
+                        } //form cols or block
+                     } //payment detail
+
+                     .info-toggle {
+                        .header {
+                           background-color: transparent;
+
+                           .icon {
+                              margin-right: 24px;
+                              width: 30px;
+                              height: 30px;
+                              @include breakpoint(extrasmall) {
+                                 width: 22px;
+                                 height: 22px;
+                              }
+                           }
+
+                           svg {
+                              width: 100%;
+                              height: 100%;
+                              g {
+                                 fill: #ffd18f;
+                              }
+                           }
+                           .title {
+                              color: #ffd18f;
+                              margin-left: 0;
+                           }
+                        } //header
+                     } //infor toggle
+                  } //content block
+               } /* ------------------------- End of logo Select section ------------------------- */
+
+               /* ------------------------- Form section --------------------------- */
+               &.payment-profile-block,
+               &.payment-address-block {
+                  .widget-block-header {
+                     .title {
+                        margin-bottom: 30px;
+                     }
+                  }
+                  .widget-block-content {
+                     .payment-profile-form,
+                     .payment-address-form {
+                        .form-block {
+                           margin-top: 0;
+
+                           .field-block {
+                              background: transparent;
+                              border: 0;
+                              border-bottom: 1px solid $bright_aqua;
+                              padding: 14px 0 14px;
+                              margin-bottom: 14px;
+
+                              input,
+                              label,
+                              select,
+                              textarea,
+                              .footer .text {
+                                 font-size: 26px;
+                                 line-height: 1.15;
+                                 font-weight: 400;
+                                 color: $bright_aqua;
+                                 @include breakpoint(medium) {
+                                    font-size: 20px;
+                                 }
+                              }
+
+                              input,
+                              textarea,
+                              select {
+                                 padding: 0;
+                              }
+
+                              .label-checkbox-block {
+                                 border: 0;
+                                 top: 50%;
+                                 transform: translateY(-50%);
+                              }
+
+                              .footer {
+                                 border: 0;
+
+                                 .text {
+                                    padding: 0;
+                                 }
+                              }
+                           } //field block
+
+                           .error-message {
+                              padding-left: 0;
+                           }
+
+                           &.select-wrapper {
+                              .label-block {
+                                 display: none;
+                              }
+
+                              select {
+                                 color: $bright_aqua !important;
+                                 -webkit-appearance: none;
+                                 -moz-appearance: none;
+                                 appearance: none;
+                              }
+                           } //form block
+
+                           &.input-focused,
+                           &.input-filled {
+                              .field-block {
+                                 label {
+                                    visibility: hidden;
+                                    opacity: 0;
+                                 }
+                              }
+                           } //focused input
+
+                           &.stored_customer_donation_receipt {
+                              .field-block {
+                                 border: 0;
+                              }
+
+                              label {
+                                 align-items: center;
+                                 position: static;
+                                 transform: unset !important;
+                                 padding: 0 0 20px;
+                              }
+
+                              .md-checkable-icon-wrapper {
+                                 margin-right: 19px;
+
+                                 svg {
+                                    rect {
+                                       fill: transparent;
+                                       stroke: $bright_aqua;
+                                    }
+
+                                    polyline {
+                                       stroke: $bright_aqua;
+                                    }
+                                 } //svg
+                              }
+                           }
+                        } //form cols or block
+                     } //address form row
+                  } //content
+               } /* ------------------------- End of Form section ------------------------- */
+            } //widget block section
+
+            .payment-submit-block {
+               max-width: 332px;
+               margin: 0 auto;
+               margin-top: 42px;
+               margin-bottom: 31px;
+
+               .btn {
+                  font-size: 26px;
+                  line-height: 1.15;
+                  font-weight: 400;
+                  border-color: $bright_aqua;
+                  background: transparent;
+                  border-radius: 0;
+                  color: $bright_aqua;
+                  @include breakpoint(medium) {
+                     font-size: 20px;
+                  }
+               }
+            } //submit button
+
+            .footer-info {
+               svg {
+                  width: 34px;
+                  height: 36px;
+                  path {
+                     stroke: $bright_aqua !important;
+                     stroke-width: 1px;
+
+                     &.lock-path1 {
+                        fill: $bright_aqua;
+                        stroke: none !important;
+                     }
+                  }
+               } //svg
+
+               .text,
+               a {
+                  font-size: 16px;
+                  line-height: 1.25;
+                  font-weight: 400;
+                  text-align: center;
+                  color: $bright_aqua !important;
+               }
+
+               span.link {
+                  color: $bright_aqua;
+                  border-bottom: 1px solid $bright_aqua;
+
+                  &:hover {
+                     background: transparent;
+                     border-color: transparent;
+                  }
+               }
+            }
+         } //widget content
+      } //widet with class
+   } //widt with ID
+} //custom class
+
+.overlay-data-protection-policy-block {
+   .overlay-block-header {
+      background-color: $black !important;
+   }
+}

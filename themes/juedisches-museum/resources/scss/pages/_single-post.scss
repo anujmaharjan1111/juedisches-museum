@@ -1,0 +1,528 @@
+.single-post {
+	.slider-content-seciton {
+		padding: 0 14px 190px;
+		@include breakpoint(medium) {
+			padding: 0 0 190px;
+		}
+		@include breakpoint(small) {
+			padding: 0 0 30px;
+		}
+	}
+	// .img-caption {
+	//    display: none;
+	// }
+
+	.site-main {
+		padding: 37px 0 0;
+		@include breakpoint(medium) {
+			padding: 121px 0 0;
+		}
+		@include breakpoint(smaller) {
+			padding: 83px 0 0;
+		}
+	}
+	.mfp-wrap {
+		background-color: $black;
+		width: 100%;
+		z-index: 44;
+		height: 100vh;
+		overflow: auto;
+		// @include breakpoint(small) {
+		//    height: 100vh;
+		//    overflow: auto;
+		// }
+
+		.mfp-content {
+			position: relative;
+			// height: 100vh;
+			padding: 180px 0 40px;
+
+			@include breakpoint(medium) {
+				padding: 240px 0 40px;
+			}
+
+			@include breakpoint(small) {
+				height: calc(100vh + 40px);
+			}
+
+			.mfp-close {
+				position: absolute;
+				top: 60px;
+				right: 46px;
+				font-size: 53px;
+				line-height: 1;
+				width: 65px;
+				height: 60px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0;
+				cursor: pointer;
+
+				@include breakpoint(medium) {
+					top: calc(108px + 20px);
+					font-size: 43px;
+					width: 56px;
+					height: 54px;
+				}
+
+				@include breakpoint(small) {
+					right: 15px;
+				}
+
+				@include breakpoint(smaller) {
+					width: 45px;
+					height: 44px;
+				}
+			}
+			.mfp-figure {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+
+		figure {
+			max-width: 80%;
+			margin: 0 auto;
+			text-align: center;
+			display: inline-block;
+
+			@include breakpoint(small) {
+				max-width: 100%;
+				padding: 0 15px;
+			}
+		}
+
+		.mfp-preloader {
+			display: none;
+		}
+	}
+
+	&.mfp-zoom-out-cur {
+		overflow: hidden;
+		margin-right: -17px;
+		@include breakpoint(wide) {
+			margin-right: 0;
+		}
+	}
+} //single post
+
+/*============================================ 
+   # Content And Slider Layout
+===============================================*/
+.single-post-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1059px;
+	margin: 0 auto;
+	margin-bottom: 57px;
+
+	.slider-wrapper {
+		position: relative;
+	}
+
+	.post-single-slider {
+		&:not(.slick-initialized) {
+			.slick-slide {
+				&:not(:first-child) {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.slick-dots {
+		display: none !important;
+	}
+
+	.single-slider-cap {
+		position: static;
+
+		.slick-arrow {
+			position: absolute;
+			top: 204px;
+			z-index: 10;
+			font-size: 0;
+			width: 40px;
+			height: 106px;
+			border: 0;
+			background-color: transparent;
+			background-repeat: no-repeat;
+			background-image: url("../../images/icons/slider-arrow-left.svg");
+
+			@media only screen and (max-width: 1400px) {
+				top: 147px;
+			}
+
+			@include breakpoint(wide) {
+				background-size: 30px 100px;
+				top: 144px;
+			}
+
+			@include breakpoint(medium) {
+				background-size: 30px 106px;
+				top: 140px;
+			}
+
+			@include breakpoint(small) {
+				background-size: 20px 106px;
+				top: calc((100% - (50% - 20px)) / 2);
+			}
+
+			@include breakpoint(smaller) {
+				top: 65px;
+			}
+
+			@media only screen and (max-width: 324px) {
+				top: 50px;
+			}
+
+			&.slick-prev {
+				left: calc(-22px - 40px);
+
+				@include breakpoint(small) {
+					left: calc(-20px - 20px);
+				}
+
+				@media only screen and (max-width: 324px) {
+					left: calc(-20px - 10px);
+				}
+			}
+
+			&.slick-next {
+				right: calc(-22px - 40px);
+				transform: rotate(180deg);
+
+				@include breakpoint(small) {
+					right: calc(-20px - 20px);
+				}
+
+				@media only screen and (max-width: 324px) {
+					right: calc(-20px - 10px);
+				}
+			}
+		} //arrow
+	}
+
+	.slider-wrapper {
+		width: 544px;
+		margin: 0 auto;
+		margin-bottom: 28px;
+		// margin-right: 117px;
+		// margin-left: calc(40px + 22px);
+
+		@media only screen and (max-width: 1400px) {
+			width: 420px;
+		}
+
+		@include breakpoint(wide) {
+			width: 400px;
+			margin: 0 auto;
+		}
+
+		@include breakpoint(small) {
+			width: 300px;
+		}
+
+		@include breakpoint(smaller) {
+			width: 236px;
+		}
+
+		@media only screen and (max-width: 324px) {
+			width: 200px;
+		}
+
+		/*============================================ 
+      # Single Slider Layout
+      ===============================================*/
+		.single-slider-holder {
+			border-radius: 1000px;
+			border: 3px solid $white;
+			overflow: hidden;
+			background: $black;
+			position: relative;
+			z-index: 10;
+			@include breakpoint(smaller) {
+				border: 2px solid $white;
+			}
+
+			@media only screen and (max-width: 1400px) {
+				width: 420px;
+			}
+			@include breakpoint(wide) {
+				width: 400px;
+			}
+
+			@include breakpoint(small) {
+				width: 300px;
+			}
+
+			@include breakpoint(smaller) {
+				width: 236px;
+			}
+
+			@media only screen and (max-width: 324px) {
+				width: 200px;
+			}
+
+			img,
+			video {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			.slick-slide {
+				height: 544px;
+				@media only screen and (max-width: 1400px) {
+					height: 420px;
+					width: 420px;
+				}
+
+				@include breakpoint(wide) {
+					width: 400px;
+					height: 400px;
+				}
+
+				@include breakpoint(small) {
+					width: 300px;
+					height: 300px;
+				}
+
+				@include breakpoint(smaller) {
+					width: 236px;
+					height: 236px;
+				}
+
+				@media only screen and (max-width: 324px) {
+					width: 200px;
+					height: 200px;
+				}
+
+				div {
+					height: 100%;
+				}
+			}
+		} //single slider holder
+	} //slider wrapper
+
+	.text-holder {
+		/*       
+         max-width: calc(100% - (544px + 40px + 22px + 117px));
+         margin-left: auto;
+         padding-top: 71px; 
+
+         @media only screen and (max-width: 1400px) {
+            max-width: calc(100% - (420px + 40px + 22px + 117px));
+         }
+         @include breakpoint(medium) {
+            max-width: 100%;
+            margin-left: 0;
+            padding-top: 9px;
+         }
+      */
+
+		br {
+			display: none;
+		}
+
+		a {
+			color: $bright_aqua;
+		}
+
+		.entry-header {
+			margin-bottom: 65px;
+			@include breakpoint(medium) {
+				margin-bottom: 30px;
+			}
+
+			h1,
+			h3,
+			h2 {
+				margin-bottom: 0;
+				font-style: italic;
+			}
+
+			h2 {
+				@include breakpoint(small) {
+					font-size: 30px;
+				}
+			}
+		}
+
+		p {
+			margin-bottom: 32px;
+			@include breakpoint(smaller) {
+				font-size: 20px;
+				line-height: 1.3;
+				margin-bottom: 26px;
+			}
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+
+		.post-copyright {
+			word-break: break-word;
+			margin-top: 65px;
+			@include breakpoint(medium) {
+				margin-top: 30px;
+			}
+			p {
+				margin-bottom: 0;
+			}
+
+			.copyright-holder {
+				.copyright {
+					display: none;
+				}
+
+				.copyright-label {
+					color: $bright_aqua;
+					cursor: pointer;
+					display: inline-block;
+					position: relative;
+					font-size: 20px;
+					line-height: 1.3;
+
+					@media only screen and (max-width: 1300px) {
+						font-size: 20px;
+						line-height: 1.3;
+					}
+
+					&:before {
+						content: "";
+						position: absolute;
+						right: -9px;
+						top: 0;
+						width: 100%;
+						height: 100%;
+						cursor: pointer;
+					}
+
+					&:after {
+						content: "";
+						position: absolute;
+						top: 8px;
+						right: -23px;
+						height: 15px;
+						width: 15px;
+						background-size: 15px;
+						background-image: url(../../images/icons/arrow-down.svg);
+						background-repeat: no-repeat;
+						-webkit-transition: ease 0.3s;
+						transition: ease 0.3s;
+					}
+				} //label
+
+				&.shown {
+					.copyright-label {
+						&:after {
+							transform: rotate(180deg);
+						}
+					} //label
+				} //dhown
+			} //copy-holder
+		} //copyright
+	} //text
+}
+
+/*============================================ 
+   # Copyright Post
+===============================================*/
+.post-copyright {
+	p {
+		font-size: 20px;
+		line-height: 1.3;
+		margin-bottom: 0;
+	}
+
+	span {
+		display: block;
+	}
+}
+
+/*============================================ 
+   # Img Captoion
+===============================================*/
+.single-slider-cap {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.img-caption {
+	margin-top: 14px;
+
+	@include breakpoint(smaller) {
+		margin-top: 9px;
+	}
+
+	a,
+	p {
+		display: block;
+		font-size: 16px;
+		max-width: 283px;
+		font-weight: 400;
+		margin: 0 auto;
+		line-height: 1.25;
+		text-align: center;
+		@include breakpoint(small) {
+			font-size: 12px;
+			line-height: 1.16;
+		}
+	}
+}
+
+/*============================================ 
+   # Slick Dots
+===============================================*/
+
+.slick-dots {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	margin-top: 2px;
+	margin-left: 21px;
+	@include breakpoint(smaller) {
+		margin-top: 17px;
+		margin-left: 0;
+	}
+
+	li {
+		margin-right: 16px;
+		line-height: 1;
+		display: inline-block;
+		@include breakpoint(smaller) {
+			margin-right: 10px;
+		}
+
+		@include breakpoint(smaller) {
+			line-height: 0;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		button {
+			background: rgba(255, 255, 255, 0.3);
+			border: 0;
+			font-size: 0;
+			width: 9px;
+			height: 9px;
+			border-radius: 50px;
+			@include breakpoint(smaller) {
+				height: 6px;
+				width: 6px;
+			}
+		}
+
+		&.slick-active button {
+			background: $white;
+		}
+	} //li
+}

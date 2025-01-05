@@ -1,0 +1,66 @@
+.page-template-fuhrungen {
+   h1 {
+      margin-bottom: 34px;
+
+      @include breakpoint(medium) {
+         margin-bottom: 15px;
+      }
+   }
+
+   .accordion .accordion-item {
+      .accordion-content {
+         .price-loc {
+            margin-top: 0;
+         }
+
+         .toggle-title {
+            font-size: 24px;
+            @media screen and (max-width: 1300px) {
+               font-size: 20px;
+            }
+         }
+
+         .nested-lr-wrap {
+            display: flex;
+            flex-wrap: wrap;
+
+            .nested-lr-head {
+               float: unset;
+
+               &.mb-explandable-nested-title {
+                  .mb-right .read-more {
+                     display: none;
+                     @include breakpoint(small) {
+                        display: inline-block;
+                     }
+                  } //right
+
+                  .mb-left {
+                     .title {
+                        @include breakpoint(wide) {
+                           font-weight: 700;
+                        }
+                     }
+                  } //let
+               } //nested title
+            } //head
+
+            .mb-explandable-nested-content {
+               margin-left: 0;
+
+               @include breakpoint(medium) {
+                  display: none;
+               }
+            } //nested content
+         } //nested lr wrap
+      } //content
+
+      &.has-nested-lr-content {
+         .main-content {
+            @include breakpoint(medium) {
+               margin-top: 0;
+            }
+         } //main content
+      } //has lr content
+   } //item
+}

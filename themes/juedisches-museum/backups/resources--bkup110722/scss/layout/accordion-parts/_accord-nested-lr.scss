@@ -1,0 +1,80 @@
+/*=========================================== 
+   # Accordion nested LR Content
+============================================*/
+.accordion-item {
+   &.has-nested-lr-content {
+      .accordion-head {
+         width: 100%;
+         float: unset;
+         padding-right: 43px;
+
+         @include breakpoint(small) {
+            padding-right: 34px;
+         }
+
+         @include breakpoint(smaller) {
+            padding-right: 21px;
+         }
+      }
+
+      .accordion-content {
+         max-width: 100%;
+         margin-top: 35px;
+         @include breakpoint(medium) {
+            margin-top: 24px;
+            padding: 0;
+         }
+      }
+
+      .main-content {
+         margin-top: 0;
+      } //mian content
+
+      .row {
+         justify-content: space-between;
+         // margin: 0;
+         @include breakpoint(small) {
+            display: block;
+            column-count: 2;
+            margin: 0;
+
+            .cols,
+            p {
+               margin-bottom: 24px;
+            }
+
+            .cols {
+               &:nth-child(2) {
+                  margin-bottom: 0;
+
+                  p {
+                     margin-bottom: 0;
+                  }
+               }
+
+               &:last-child {
+                  margin-bottom: 0;
+                  p {
+                     &:last-child {
+                        margin-bottom: 0;
+                     }
+                  }
+               }
+               @include breakpoint(small) {
+                  max-width: 100%;
+                  padding: 0 0;
+               }
+            } //cols
+         }
+      } //row
+   }
+
+   //When nested content has col
+   &.has-col {
+      .nested-lr-content {
+         @include breakpoint(medium) {
+            padding: 0 0 6px;
+         }
+      }
+   }
+} //accord with cols

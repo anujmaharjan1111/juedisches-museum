@@ -1,0 +1,107 @@
+<?php
+/**
+ * Template Name: Sammlung
+*/
+get_header();
+?>
+<main class="site-main">
+   <section class="content-section">
+        <div class="container">
+            <h1 class="sub-title text-center"><?php the_title(); ?></h1>
+            <div class="read-more-list">
+                <?php 
+                $content = get_the_content();
+                $saperator = '[more]';
+                $divided_content = explode( $saperator, $content );
+                if( !empty( $divided_content ) && isset( $divided_content[0] ) && isset( $divided_content[1] ) ) {
+                    $before_content = $divided_content[0];
+                    $after_content  = $divided_content[1];
+                } else {
+                    $before_content = $content;
+                    $after_content  = '';
+                }
+                ?>
+                <div class="excerpt-content">
+                   <p><?php echo $before_content; ?></p> 
+                </div>
+                <!-- Main Content -->
+                <div class="main-content">
+                     <?php echo apply_filters('the_content', $after_content ); ?>
+                </div>
+                <span class="read-more"><?php _e( 'read more', 'juedisches-museum' ); ?></span>
+            </div><!-- readmore list -->
+        </div>
+   </section>
+   <!-- End of Full section -->
+   <section class="highlights">
+       <div class="container">
+          <div class="lr-img-cont-holder">
+          <?php
+            if( have_rows( '_highlights' ) ) {
+               ?>
+                <h2 class="sub-title"><?php _e( 'Highlights', 'juedisches-museum' ); ?></h2>
+                <?php
+                while( have_rows( '_highlights' ) ) {
+                   the_row();
+                   $img     = get_sub_field( '_highlights_image' );
+                   ?>
+                     <div class="list-item">
+                        <div class="img-holder popup">
+                           <?php
+                           // image
+                           if( $img ){
+                              ?>
+                              <a class="image-popup" href="<?php echo esc_url( $img['url'] ); ?>">
+                                 <img src="<?php echo esc_url( $img['url'] ); ?>" alt="<?php echo esc_attr( $img['alt'] ); ?>">
+                              </a>
+                              <?php
+                           } // endif $img
+                           ?>
+                        </div><!-- Img Holder -->
+                        <div class="text-holder">
+                           <h3 class="title"><?php echo get_sub_field( '_highlights_title' ); ?></h3>
+                           <div class="content">
+                              <div class="read-more-list">
+                                 <?php // echo get_sub_field( '_highlights_content' ); ?>
+                                 <?php 
+                                 $content = get_sub_field( '_highlights_content' );
+                                 $saperator = '[more]';
+                                 $divided_content = explode( $saperator, $content );
+                                 if( !empty( $divided_content ) && isset( $divided_content[0] ) && isset( $divided_content[1] ) ) {
+                                    $before_content = $divided_content[0];
+                                    $after_content  = $divided_content[1];
+                                 } else {
+                                    $before_content = $content;
+                                    $after_content  = '';
+                                 }
+                                 ?>
+                                 <div class="excerpt-content">
+                                    <p><?php echo $before_content; ?></p> 
+                                 </div>
+                                 <!-- Main Content -->
+                                 <div class="main-content">
+                                       <?php echo apply_filters('the_content', $after_content ); ?>
+                                 </div>
+                                 <?php if ( $after_content != '' ) {
+                                    ?>
+                                    <span class="lr-cont-img-read-more"><?php _e( 'read more', 'juedisches-museum' ); ?></span>
+                                    <?php
+                                 } ?>
+                              </div>
+                              
+                           </div>
+                        </div><!-- text Holder -->
+                     </div><!-- List-->
+                    <?php
+                    
+                } // endwhile _highlights
+                ?>
+            <?php
+            } // endif _highlights
+            ?>
+         </div><!-- List Holder -->
+      </div>
+   </section>
+</main> 
+<?php 
+get_footer();

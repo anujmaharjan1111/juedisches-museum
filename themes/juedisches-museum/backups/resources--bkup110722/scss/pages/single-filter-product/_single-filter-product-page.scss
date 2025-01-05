@@ -1,0 +1,18 @@
+body {
+   &.single-museum-collection {
+      .site-header {
+         @media screen and (min-width: 992px) {
+            padding: 16px 0 16px;
+         }
+      }
+      /* _____________ Fancy box styling _________ */
+      .site-wrapper {
+         padding-bottom: 130px;
+
+         @include breakpoint(medium) {
+            padding-top: 100px;
+            padding-bottom: 80px;
+         }
+      }
+   }
+}

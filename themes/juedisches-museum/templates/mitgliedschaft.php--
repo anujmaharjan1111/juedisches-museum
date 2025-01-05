@@ -1,0 +1,28 @@
+<?php
+/**
+ * The template for the subscription form page.
+ * 
+ * Template Name: Mitgliedschaft
+ */
+get_header(); ?>
+    <main class="site-main">
+        <section class="mitgliedschaft-section">
+            <div class="container">
+                <h1 class="sub-title text-center"><?php the_title(); ?></h1>
+                <div class="col-8">
+                    <?php
+                    $form = get_field( '_mit_form' );
+                    if( $form ) {
+                        // form
+                        echo do_shortcode( "[contact-form-7 id='{$form->ID}' title='{$form->post_title}']");
+                    }
+                    ?>
+                </div>
+                <div class="col-4">
+                    <?php echo get_field( '_mit_rc_content' ); // right content ?>
+                </div>
+            </div>
+        </section>
+    </main>
+<?php 
+get_footer();

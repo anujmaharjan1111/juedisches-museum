@@ -1,0 +1,139 @@
+.page-template-uberuns {
+   .site-main {
+      padding: 47px 0 0;
+
+      @include breakpoint(medium) {
+         padding: 135px 0 35px;
+      }
+
+      @include breakpoint(smaller) {
+         padding: 90px 0 35px;
+      }
+   }
+
+   h1 {
+      margin-bottom: 14px;
+      @include breakpoint(small) {
+         margin-bottom: 22px;
+      }
+   }
+
+   //Accordion Item
+   .accordion .accordion-item {
+      padding: 14px 0 12px;
+      @include breakpoint(small) {
+         padding: 11px 0 9px;
+      }
+
+      &:after {
+         top: 19px;
+         @include breakpoint(small) {
+            top: 12px;
+         }
+      }
+
+      &:before {
+         top: 30px;
+         @include breakpoint(small) {
+            top: 18px;
+         }
+      }
+
+      //Has Nested content
+      &.has-nested-lr-content {
+         .accordion-head {
+            .sub-title {
+               @include breakpoint(small) {
+                  font-size: 24px;
+                  line-height: 1.16;
+               }
+            }
+         } //Head
+
+         //content
+         .accordion-content {
+            padding: 0 50px 41px 0;
+
+            @include breakpoint(small) {
+               padding: 0 50px 16px 0;
+               margin-top: 21px;
+            }
+
+            p {
+               margin-bottom: 28px;
+            }
+         } //accord content
+
+         //Image Right
+      } //has nested
+
+      //For content padding ~ right img
+      &.acc-type-image-right {
+         .accordion-content {
+            padding: 0 50px 62px 0;
+
+            @include breakpoint(medium) {
+               padding: 0 0 62px 0;
+            }
+
+            @include breakpoint(small) {
+               padding: 0 0 27px 0;
+            }
+         }
+      } //img-right accordtion item
+
+      &.acc-type-only-years {
+         .main-content {
+            margin-top: 0;
+         }
+      }
+
+      //For content padding ~ right img
+      &.acc-type-image-right.has-rcap-limg {
+         .accordion-content {
+            padding: 0 50px 38px 0;
+
+            @include breakpoint(small) {
+               padding: 0 0 13px 0;
+            }
+         }
+      }
+
+      &.acc-type-single-col {
+         .accordion-content {
+            padding: 0 50px 38px 0;
+
+            @include breakpoint(small) {
+               padding: 0 0 13px 0;
+            }
+         }
+
+         .main-content {
+            margin-top: 0;
+         }
+      }
+
+      //For content padding ~ right img
+      &.acc-type-team {
+         border-bottom: 2px solid $white;
+
+         @media only screen and (max-width: 1300px) {
+            border-bottom: 1px solid $white;
+         }
+
+         .accordion-content {
+            @media only screen and (max-width: 1025px) {
+               padding: 0 0 13px 0;
+            }
+         }
+
+         .main-content {
+            margin-top: 0;
+         }
+
+         &.icon-open {
+            border-bottom: 0;
+         }
+      } //team
+   } //accord item
+}

@@ -1,0 +1,789 @@
+.accordion-section {
+   margin-bottom: 73px;
+   @include breakpoint(medium) {
+      margin-bottom: 0;
+   }
+}
+
+.accordion {
+   margin-bottom: 114px;
+   @include breakpoint(medium) {
+      margin-bottom: 34px;
+
+      &:last-of-type {
+         margin-bottom: 0;
+      }
+   }
+
+   /*=========================================== 
+      # Common accordion Item Style
+   ============================================*/
+   .accordion-item {
+      padding: 25px 0;
+      border-top: 2px solid $white;
+      position: relative;
+
+      @media only screen and (max-width: 1300px) {
+         border-top: 1px solid $white;
+      }
+
+      &:last-of-type {
+         padding: 25px 0 0;
+      }
+
+      &:after,
+      &:before {
+         content: "";
+         position: absolute;
+         background: #fff;
+         transition: 0.4s all;
+         -webkit-transition: 0.4s all;
+      }
+
+      &:before {
+         top: 37px;
+         right: 12px;
+         height: 2px;
+         width: 24px;
+         @media only screen and (max-width: 1300px) {
+            top: 40px;
+         }
+         @include breakpoint(small) {
+            width: 14px;
+            top: 36px;
+            right: 12px;
+         }
+         @include breakpoint(extrasmall) {
+            right: 0;
+         }
+      }
+
+      &:after {
+         top: 26px;
+         right: 23px;
+         height: 24px;
+         width: 2px;
+         @media only screen and (max-width: 1300px) {
+            top: 29px;
+         }
+         @include breakpoint(small) {
+            height: 14px;
+            right: 18px;
+            top: 30px;
+         }
+         @include breakpoint(extrasmall) {
+            right: 6px;
+         }
+      }
+
+      &.icon-open {
+         &:after,
+         &:before {
+            transform: rotate(-45deg);
+         }
+
+         .accordion-head {
+            .title,
+            .sub-title {
+               font-style: italic;
+            }
+         }
+      }
+
+      .content-wrapper {
+         overflow: hidden;
+      }
+
+      .accordion-head {
+         width: 438px;
+         position: relative;
+         z-index: 2;
+         cursor: pointer;
+         float: left;
+         @include breakpoint(wide) {
+            width: 327px;
+         }
+         @include breakpoint(small) {
+            padding-right: 21px;
+         }
+         @include breakpoint(medium) {
+            width: 100%;
+            float: unset;
+         }
+
+         &:before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 4000px;
+         }
+
+         .text-wrapper {
+            word-break: break-word;
+
+            @include breakpoint(medium) {
+               padding: 0;
+            }
+         }
+
+         .title,
+         .sub-title {
+            font-style: normal;
+            margin-bottom: 0;
+            @media only screen and (max-width: 1300px) {
+               font-size: 26px;
+               line-height: 1.23;
+            }
+         }
+      } //header
+
+      .accordion-content {
+         max-width: calc(100% - (446px + 24px));
+         padding: 0 50px 57px 0;
+         margin-left: auto;
+         display: none;
+         @media only screen and (max-width: 1300px) {
+            margin-left: auto;
+         }
+
+         @include breakpoint(wide) {
+            max-width: calc(100% - (327px + 32px));
+         }
+
+         @include breakpoint(medium) {
+            max-width: 100%;
+            margin-left: 0;
+            padding: 0 0 42px;
+         }
+
+         a {
+            color: $bright_aqua;
+         }
+
+         p {
+            margin-bottom: 35px;
+            word-break: break-word;
+
+            &:last-of-type {
+               margin-bottom: 0;
+            }
+         }
+
+         ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+         }
+
+         p,
+         a {
+            @media only screen and (max-width: 1300px) {
+               font-size: 20px;
+               line-height: 1.3;
+            }
+         }
+
+         .main-content {
+            position: relative;
+            z-index: 4;
+            cursor: auto;
+            @include breakpoint(medium) {
+               margin-top: 24px;
+            }
+         }
+
+         .date {
+            li {
+               margin-right: 12px;
+            }
+            a {
+               display: block;
+               line-height: 1.25;
+            }
+         }
+
+         .img-caption {
+            height: auto !important;
+            max-width: 356px;
+            margin: 18px auto 0;
+            @include breakpoint(small) {
+               margin: 14px auto 0;
+            }
+
+            a,
+            p {
+               margin-bottom: 0 !important;
+               max-width: 100%;
+
+               @include breakpoint(small) {
+                  font-size: 12px;
+                  margin-top: 13px;
+                  line-height: 1.16;
+               }
+            }
+         }
+
+         .slick-list {
+            margin: 0 -10px;
+
+            .slick-slide {
+               padding: 0 10px;
+            }
+         }
+
+         .img-holder {
+            height: 710px;
+            width: 710px;
+            margin: 0 auto;
+
+            @media only screen and (max-width: 1300px) {
+               height: 428px;
+               width: 428px;
+            }
+            @include breakpoint(medium) {
+               height: 328px;
+               width: 328px;
+            }
+            @media only screen and (max-width: 330px) {
+               height: 235px;
+               width: 235px;
+            }
+
+            img,
+            video {
+               height: 100%;
+               border-radius: 50%;
+               width: 100%;
+               object-fit: cover;
+            }
+         }
+
+         .slick-dots {
+            margin-left: 0;
+            @include breakpoint(small) {
+               margin-top: 7px;
+            }
+         }
+
+         //Price Loc
+         .price-loc {
+            margin-top: 35px;
+            @include breakpoint(smaller) {
+               margin-top: 0;
+            }
+            @media screen and (max-width: 991px) and (orientation: landscape) {
+               margin-top: 0;
+            }
+
+            .price,
+            .loc {
+               p {
+                  margin-bottom: 0;
+
+                  // &:last-child {
+                  //    margin-bottom: 35px;
+                  // }
+               }
+            } //loc
+
+            @include breakpoint(small) {
+               .price {
+                  margin-bottom: 20px;
+               }
+
+               .toggle-content {
+                  margin-bottom: 10px;
+               }
+            }
+
+            @media screen and (max-width: 991px) and (orientation: landscape) {
+               .price {
+                  margin-bottom: 20px;
+               }
+
+               .toggle-content {
+                  margin-bottom: 10px;
+               }
+            }
+         }
+
+         //Toggle Next ELement
+         .toggle-title {
+            color: $bright_aqua;
+            display: inline-block;
+            cursor: pointer;
+            font-size: 26px;
+            line-height: 1.15;
+            font-style: normal;
+            position: relative;
+
+            &:after {
+               content: "";
+               position: absolute;
+               top: 6px;
+               right: -23px;
+               height: 15px;
+               width: 15px;
+               background-size: 15px;
+               background-image: url(../../images/icons/arrow-down.svg);
+               background-repeat: no-repeat;
+               transition: ease 0.3s;
+
+               @include breakpoint(small) {
+                  display: none;
+               }
+            }
+            &:before {
+               content: "";
+               position: absolute;
+               right: -9px;
+               top: 0;
+               width: 100%;
+               height: 100%;
+               cursor: pointer;
+            }
+
+            &.shown {
+               &:after {
+                  transform: scaleY(-1);
+               }
+            }
+            @include breakpoint(wide) {
+               font-size: 20px;
+               line-height: 1.3;
+            }
+
+            @include breakpoint(small) {
+               color: $white;
+               pointer-events: none;
+            }
+
+            &.shown {
+               font-style: italic;
+            }
+            @media (hover: hover) {
+               &:hover {
+                  font-style: italic;
+               }
+            }
+         } //title
+
+         .toggle-content {
+            display: none;
+            @include breakpoint(small) {
+               display: block !important;
+            }
+         }
+
+         .cl-imgr-holder {
+            display: flex;
+            flex-wrap: wrap;
+
+            .cl-holder {
+               max-width: calc(100% - (633px + 58px));
+               margin-right: 58px;
+               margin-top: 44px;
+
+               @media only screen and (max-width: 1400px) {
+                  max-width: calc(100% - (533px + 58px));
+               }
+
+               @media only screen and (max-width: 1200px) {
+                  max-width: calc(100% - (433px + 58px));
+               }
+
+               @media only screen and (max-width: 1025px) {
+                  max-width: calc(100% - (360px + 58px));
+               }
+
+               @include breakpoint(medium) {
+                  max-width: 100%;
+                  margin-right: 0;
+               }
+            }
+
+            .imgr-holder {
+               margin-left: auto;
+               @include breakpoint(medium) {
+                  margin: 0 auto;
+               }
+
+               img {
+                  width: 633px;
+                  height: 633px;
+                  border-radius: 50%;
+                  border: 3px solid $white;
+                  object-fit: cover;
+
+                  @media only screen and (max-width: 1400px) {
+                     width: 533px;
+                     height: 533px;
+                  }
+
+                  @media only screen and (max-width: 1200px) {
+                     width: 433px;
+                     height: 433px;
+                  }
+
+                  @media only screen and (max-width: 1025px) {
+                     width: 360px;
+                     height: 360px;
+                  }
+
+                  @include breakpoint(medium) {
+                     width: 279px;
+                     height: 279px;
+                  }
+               }
+            } //img-r
+
+            .img-caption {
+               display: block;
+               max-width: 308px;
+            }
+
+            .author {
+               display: none;
+            }
+         } //cl_imgr holder
+      } //accordion content
+
+      //Nested lr wrapper
+      .nested-lr-wrap {
+         padding: 25px 0 50px;
+         border-top: 2px solid $white;
+         position: relative;
+         @include breakpoint(small) {
+            padding: 5px 0 4px;
+         }
+
+         @media only screen and (max-width: 1300px) {
+            border-top: 1px solid $white;
+         }
+
+         &:last-of-type {
+            padding: 25px 0 0;
+            @include breakpoint(small) {
+               padding: 5px 0 0;
+            }
+            .nested-lr-content {
+               padding: 0 0 25px;
+               @include breakpoint(small) {
+                  padding: 0 0 10px;
+               }
+            } //nested content
+         }
+
+         &:first-child {
+            border-top: 0;
+            padding: 0 0 50px;
+            @include breakpoint(small) {
+               padding: 0 0 4px;
+            }
+         }
+      } //nested wrap
+
+      //Nested Head
+      .nested-lr-head {
+         width: 438px;
+         position: relative;
+         z-index: 2;
+         cursor: pointer;
+         float: left;
+         clear: both;
+         overflow: hidden;
+
+         @include breakpoint(wide) {
+            width: 327px;
+         }
+         @include breakpoint(small) {
+            padding-right: 21px;
+         }
+         @include breakpoint(medium) {
+            width: 100%;
+            float: unset;
+         }
+
+         .title,
+         .sub-title {
+            font-style: normal;
+            line-height: 1.16;
+            margin-bottom: 0;
+            cursor: auto;
+            @media only screen and (max-width: 1300px) {
+               font-size: 26px;
+               line-height: 1.23;
+            }
+            @include breakpoint(medium) {
+               font-size: 24px;
+               line-height: 1.3;
+               font-weight: 400;
+            }
+
+            @include breakpoint(small) {
+               font-size: 20px;
+            }
+         }
+
+         .sub-title {
+            & + a {
+               margin-top: 16px;
+               display: inline-block;
+            }
+         }
+
+         //For MB Expandable content
+         &.mb-explandable-nested-title {
+            .mb-right {
+               display: none;
+            }
+
+            @include breakpoint(small) {
+               display: flex;
+               align-items: flex-end;
+               justify-content: space-between;
+
+               .mb-left {
+                  width: 187px;
+               }
+
+               .mb-right {
+                  display: inline-block;
+
+                  .read-more {
+                     display: inline-block;
+                     color: $bright_aqua;
+
+                     &.opened-readmore {
+                        display: none;
+                     }
+                  }
+               } //right
+            }
+            @media screen and (max-width: 991px) and (orientation: landscape) {
+               display: flex;
+               align-items: flex-end;
+               justify-content: space-between;
+
+               .mb-left {
+                  width: 187px;
+               }
+
+               .mb-right {
+                  display: inline-block;
+
+                  .read-more {
+                     display: inline-block;
+                     color: $bright_aqua;
+
+                     &.opened-readmore {
+                        display: none;
+                     }
+                  }
+               }
+            } //ladnscape
+         }
+      } //head
+
+      //Nested Content
+      .nested-lr-content {
+         max-width: calc(100% - (446px + 24px));
+         margin-left: auto;
+
+         @media only screen and (max-width: 1300px) {
+            margin-left: auto;
+         }
+
+         @include breakpoint(wide) {
+            max-width: calc(100% - (327px + 32px));
+         }
+
+         @include breakpoint(medium) {
+            max-width: 100%;
+            margin-left: 0;
+            margin-top: 33px;
+         }
+
+         @include breakpoint(small) {
+            padding: 0 0 32px;
+         }
+
+         img {
+            border-radius: 50%;
+            width: 230px;
+            height: 230px;
+            border: 2px solid $white;
+            object-fit: cover;
+
+            @include breakpoint(small) {
+               width: 120px;
+               height: 120px;
+               border: 1px solid $white;
+            }
+            @media only screen and (max-width: 330px) {
+               width: 100px;
+               height: 100px;
+            }
+         }
+
+         &.has-right-content {
+            display: flex;
+            flex-wrap: wrap;
+
+            p {
+               max-width: calc(100% - 313px);
+               @include breakpoint(medium) {
+                  max-width: 100%;
+               }
+            }
+
+            .right-content {
+               max-width: 261px;
+               margin-left: 52px;
+               @include breakpoint(medium) {
+                  max-width: 100%;
+                  margin-left: 0;
+               }
+            }
+         }
+
+         .two-col {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+         }
+
+         &.mb-explandable-nested-content {
+            @include breakpoint(small) {
+               display: none;
+            }
+         }
+      }
+   } //list item
+
+   /*=========================================== 
+      # Accordion nested LR Content
+   ============================================*/
+   .accordion-item {
+      &.has-nested-lr-content {
+         .accordion-head {
+            width: 100%;
+            float: unset;
+         }
+
+         .accordion-content {
+            max-width: 100%;
+            margin-top: 35px;
+            @include breakpoint(medium) {
+               margin-top: 24px;
+               padding: 0;
+            }
+         }
+
+         .main-content {
+            margin-top: 0;
+         } //mian content
+
+         .row {
+            justify-content: space-between;
+            // margin: 0;
+            @include breakpoint(small) {
+               display: block;
+               column-count: 2;
+               margin: 0;
+
+               .cols,
+               p {
+                  margin-bottom: 24px;
+               }
+
+               .cols {
+                  &:nth-child(2) {
+                     margin-bottom: 0;
+
+                     p {
+                        margin-bottom: 0;
+                     }
+                  }
+
+                  &:last-child {
+                     margin-bottom: 0;
+                     p {
+                        &:last-child {
+                           margin-bottom: 0;
+                        }
+                     }
+                  }
+                  @include breakpoint(small) {
+                     max-width: 100%;
+                     padding: 0 0;
+                  }
+               } //cols
+            }
+         } //row
+      }
+
+      //When nested content has col
+      &.has-col {
+         .nested-lr-content {
+            @include breakpoint(medium) {
+               padding: 0 0 6px;
+            }
+         }
+      }
+   } //accord with cols
+
+   /*========================================================================= 
+      # Accordion nested with Right image with cap and left content
+   ========================================================================== */
+   .accordion-item {
+      &.acc-type-image-right {
+         .accordion-content {
+            padding: 0 50px 86px 0;
+            margin-top: 0;
+
+            @include breakpoint(medium) {
+               padding: 0 0 86px 0;
+            }
+         }
+      }
+   } //item
+
+   /*==================================================================
+      # Accordion nested with Right image with right Designation and left content
+   =======================================================================*/
+   .accordion-item {
+      &.has-rcap-limg {
+         .cl-imgr-holder {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+
+            .cl-holder {
+               max-width: calc(100% - (646px + 58px));
+            }
+
+            .imgr-holder {
+               display: flex;
+               flex-wrap: wrap;
+               align-items: flex-end;
+               margin-bottom: 28px;
+
+               img {
+                  width: 370px;
+                  height: 370px;
+               }
+            } //holder
+
+            .img-caption {
+               display: none;
+            }
+
+            .author {
+               display: block;
+               margin-left: 19px;
+            }
+         }
+      } //has-rcap-limg
+   }
+}

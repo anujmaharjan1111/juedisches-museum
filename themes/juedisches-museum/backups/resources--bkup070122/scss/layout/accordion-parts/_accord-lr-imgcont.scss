@@ -1,0 +1,21 @@
+/*=========================================================================
+   # Accordion nested with Right image with cap and left content
+========================================================================== */
+.accordion-item.has-nested-lr-content {
+   &.acc-type-image-right {
+      .accordion-content {
+         margin-top: 0;
+         padding: 0 50px 86px 0;
+
+         @include breakpoint(medium) {
+            padding: 0 0 62px 0;
+         }
+
+         .main-content {
+            @include breakpoint(small) {
+               margin-top: 0;
+            }
+         }
+      } //accord content
+   }
+} //item
